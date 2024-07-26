@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 
 import argparse
+import os
 import sys
-import textwrap
+import git
 
 from utils.custom_formatter import CustomFormatter
+from src.ai_music_bot import ai_handle
 
 
-PROJECTS: list[str] = ["prolog"]
+PROJECTS: list[str] = ["ai_music_bot" ,"prolog"]
 OPERATIONS: list[str] = ["fetch", "build", "test", "update"]
 
 SUPPORTED_OPERATIONS: str \
@@ -32,7 +34,11 @@ parser.add_argument("project", nargs='?', help=PROJECT_MESSAGE)
 
 
 def update_self() -> int:
-    print("TODO: Update self")
+    self_location = os.path.dirname(__file__)
+    repo = git.cmd.Git(self_location)
+    repo.fetch()
+    out = repo.pull()
+    print(out)
     return 0
 
 
@@ -54,6 +60,9 @@ def main(args: list[str]) -> int:
 
     if project == "prolog":
         print("TODO: Handle prolog")
+        return 0
+    if project == "ai_music_bot":
+        ai_handle(operation)
         return 0
     else:
         print("Project %s not supported!" % (project))

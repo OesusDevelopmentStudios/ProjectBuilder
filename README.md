@@ -2,7 +2,8 @@
 Utility designed to make building and resolving dependencies for OesusDevelopmentStudios projects. Mainly designed to make development and testing easier.
 
 ## Supported projects
-* [Prolog](https://github.com/OesusDevelopmentStudios/proLog)
+* [AiMusicBot](https://github.com/OesusDevelopmentStudios/AiMusicBot)
+* [~~Prolog~~](https://github.com/OesusDevelopmentStudios/proLog)
 
 ## Setup
 1. Clone this repository into your home directory.
