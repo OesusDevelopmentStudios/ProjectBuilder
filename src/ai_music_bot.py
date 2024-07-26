@@ -9,7 +9,6 @@ PATH = "AiMusicBot"
 AI_REPO = "git@github.com:OesusDevelopmentStudios/AiMusicBot.git"
 
 
-
 def handle_fetch(path: str):
     target = os.path.join(path, PATH)
     if os.path.exists(target):
@@ -19,6 +18,7 @@ def handle_fetch(path: str):
     Log.info("Fetching main project...")
     Repo.clone_from(AI_REPO, target, branch="c++", progress=Log.log_progress)
     Log.info("\nDone")
+
 
 def handle_build():
     print("TODO")
