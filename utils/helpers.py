@@ -32,7 +32,6 @@ def are_changes_uncommited(path: str, name: str, branch: str="master") -> bool:
         Log.error(name + " has uncommited changes!")
         return True
     repo.git.fetch()
-    # branch_diff = list(repo.iter_commits(branch + '{u}..' + branch))
     branch_diff = list(repo.iter_commits(branch + '@{u}..' + branch))
     if branch_diff:
         Log.error(name + " has unpushed changes!")

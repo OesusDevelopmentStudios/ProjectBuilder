@@ -57,8 +57,7 @@ def handle_build(path: str):
         return
     os.system("make compile-release")
     os.chdir("scripts/ytp")
-    os.system("python3 -m venv ./.venv")
-    os.system(".venv/bin/pip3 install -r requirements.txt")
+    os.system("pip3 install -r requirements.txt")
 
 
 def handle_update(path: str):
