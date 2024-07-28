@@ -6,7 +6,7 @@ class Log:
         print("WARNING: " + msg)
 
     def error(msg: str) -> None:
-        print("ERROR: " + msg)
+        print("ERROR: " + msg, flush=True)
 
     def log_progress(x, y, z, msg):
         if msg != "":
