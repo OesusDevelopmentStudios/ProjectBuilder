@@ -6,8 +6,20 @@ Utility designed to make building and resolving dependencies for OesusDevelopmen
 * [~~Prolog~~](https://github.com/OesusDevelopmentStudios/proLog)
 
 ## Setup
-1. Clone this repository into your home directory.
-2. Add the following lines to your shell config (~/.bashrc, ~/.zshrc):
+1. Clone this repository into your home directory. (Or any other place you want)
+2. Create virtaul env in the script directory by calling:
+
+```
+python3 -m venv .venv
+```
+
+3. Install requirements.txt
+
+```
+ pip3 install -r requirements.txt
+```
+
+4. Add the following lines to your shell config (~/.bashrc, ~/.zshrc):
 ```
 export PATH=$PATH:/home/$USER/ProjectBuilder
 alias project_builder="project_builder.py"
